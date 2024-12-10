@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+}
+
+.logo .i {
+    color: #2f8f1d;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 5px;
+}
+
+nav button {
+    background-color: rgb(61 153 112);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: -10px;
+    font-weight: bold;
+
+}
+.pirveli{
+    border-radius: 20px 0 0 20px;
+}
+.bolo{
+    border-radius: 0px 20px 20px 0px;
+}
+
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+   
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img {
+    width: 50%;
+    height: auto;
+}
+
+.text-container {
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.main{
+ 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main > h1{
+    text-align: center;
+    font-size: 40px;
+    width: 50%;
+}
+.main > p{
+    font-size: 20px;
+    width: 50%;
+    padding-right: 40px;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 50px;
+    font-size: 20px;
+    width: 100%;
+}
+.servicestxt{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 80px;
+}
+.service{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+  
+}
+html {
+    scroll-behavior: smooth;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #2dac7f;
+    display: flex;
+}
+#myText{
+    display: none;
+}
+.leftfooter, .rightfooter{
+    width: 50%;
+    height: 100%;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicestxtup{
+
+    margin-top: 40px;
+}
+.bttnRdMr{
+    background-color: rgb(61 153 112);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: -10px;
+    font-weight: bold;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.kvleva{
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+#SqemaMore, #kvlevaMore{
+    background-color: rgb(61 153 112);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5%;
+    cursor: pointer;
+
+}
+#Sqema, #Kvleva{
+    display: none;
+    font-style: normal;
+}
+.kvlevsqema{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+}
+footer{
+    height: 250px;
+}
+.social{
+    display: none;
+}
+#ul{
+    display: none;
+}
+#lala{
+    display: none;
+}
+@media(max-width:1025px){
+
+    .text-container{
+        width: 90% !important;
+    }
+   
+    .services{
+        flex-direction: column;
+    }
+    .servicestxt{
+        width: 100%;
+   
+    }
+   
+    .img{
+        width: 595px !important;
+        height: 360px !important;
+    }
+    .kvleva{
+        gap: 30px;
+        flex-direction: column-reverse;
+    }
+}
+@media(max-width:1316px){
+    p,div{
+        font-size: 18px !important;
+    }
+    h2{
+        font-size: 34px !important;
+    }
+}
+@media(max-width:1009px ){
+    .main > h1{
+        
+        font-size: 30px;
+      
+    }
+    .main > p{
+        font-size: 14px !important;
+    }
+    .service{
+        flex-direction: column;
+    }
+    
+
+}
+@media(max-width:652px){
+    h2,h1,p{
+        font-size: medium !important;
+    }
+    nav{
+        display: none;
+    }
+    #lala{
+        display: inline;
+        font-size: xx-large !important ;
+        cursor: pointer;
+        margin-right: 50px;
+        color: black;
+        
+    }#ul{
+        display: none;
+        justify-content: center;
+    }
+    .img, .kvleva>img{
+        width: 350px !important;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .leftfooter,.rightfooter{
+        width: 100%;
+    }
+    .content{
+        gap: 0;
+        padding-left: 40px;
+    }
+    .image-container >img {
+        width: 100%;
+    }
+    .main{
+        flex-direction: column;
+        gap:15px;   
+    }
+    .main > h1,p{
+        width: 100% !important;
+    }
+    .main > p{
+        padding-left: 15px ;
+    }
+    .service{
+        padding: 38px;
+    }
+}
+@media(max-width:376px){
+    .img, .kvleva>img{
+        width: 300px !important;
+    }
+    .kvleva > img{
+        height: 320px !important;
+    }
+}
+@media(max-width: 363px){
+    h2,h1,p{
+        font-size: small !important;
+    }
+    .img, .kvleva>img{
+    width: 244px !important;
+    }
+    .img{
+    height: 310px !important;
+    }
+    .main>p{
+        font-size: 12px !important ;
+    }
+}
+@media(min-width:1918px){
+    h2,h1,p, button{
+        font-size: xx-large !important;
+    }
+    .main{
+        height: 500px !important;
+    }
+    .logo>a>img{
+        width: 150px;
+        height: 125px;
+    }
+    .servicestxtup,.servicestxtmiddle,.servicestxtdown{
+        font-size: xx-large;
+    }
+    .img, .kvleva>img{
+        width: 720px !important;
+        height: 520px !important;
+    }
+    .text-container{
+        justify-content: center;
+        flex-direction: column;
+        display: flex;
+    }
+    .servicestxt{
+        
+        padding-left: 27px;
+    }
+    .img{
+        margin-left: 11%;
+    }
+    .main > p{
+        padding-left: 25px;
+    }
+    .kvlevsqema{
+        padding-left: 11%;
+    }
+}
+

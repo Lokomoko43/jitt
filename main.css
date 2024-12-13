@@ -240,6 +240,7 @@ footer{
     .kvleva{
         gap: 30px;
         flex-direction: column-reverse;
+        align-items: center;
     }
 }
 @media(max-width:1316px){

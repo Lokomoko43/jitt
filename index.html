@@ -4,145 +4,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just In Time</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'BPG Nino Mtavruli';
+            src: url('src/fonts/bpg_nino_mtavruli_bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        :root {
+            --primary-color: #3d9970;
+            --secondary-color: #2dac7f;
+            --bg-light: #f5f5f5;
+            --bg-lighter: #fafafa;
+        }
+
+        body {
+            font-family: 'BPG Nino Mtavruli', sans-serif;
+            background-color: var(--bg-light);
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-link {
+            color: var(--primary-color) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, var(--bg-light), var(--bg-lighter));
+            padding: 6rem 0;
+        }
+
+        .about-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .services-section {
+            padding: 4rem 0;
+            background-color: var(--bg-lighter);
+        }
+
+        .service-card {
+            border: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .map-container {
+            height: 250px;
+            width: 100%;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'BPG Nino Mtavruli', sans-serif;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+        }
+
+        .nav-link {
+            color: var(--primary-color) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-link i {
+            font-size: 1.1rem;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav {
+            gap: 0.5rem;
+        }
+
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
 
-                <img src="LOGO.jpg" width="125px" height="100px">
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="LOGO.jpg" alt="JIT Logo" height="60">
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <i class="fas fa-info-circle"></i>
+                            <span>ჩვენს შესახებ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            <i class="fas fa-cogs"></i>
+                            <span>სერვისები</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="fas fa-envelope"></i>
+                            <span>კონტაქტი</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <nav>
-          <a href="#main"> <button class="pirveli">ჩვენს შესახებ</button></a>
-           <a href="#services"> <button>სერვისები</button></a>
-            <a href="#footer"><button class="bolo">კონტაქტი</button></a>
-        </nav>
-        <i class="fa fa-bars" id="lala"></i>
+    </nav>
 
-      </header>
-      <nav id="ul">
-        <a href="#main"> <button class="pirveli">ჩვენს შესახებ</button></a>
-         <a href="#services"> <button>სერვისები</button></a>
-          <a href="#footer"><button class="bolo">კონტაქტი</button></a>
-      </nav>
-      <main>
-      
-        <section class="content">
-          <div class="image-container">
-            <img src="Portrait.webp" alt="Architectural Model">
-          </div>
-          <div class="text-container">
-            <h2>Just In Time</h2>
-            <p>JIT: ჩვენ ვქმნით სატრანსპორტო სქემებს, რომლებიც უზრუნველყოფს თბილისის საგზაო ინფრასტრუქტურის განვითარებას და უსაფრთხოებას.</p>
-          </div>
-        </section>
-        <section class="main" id="main" style="background-color: #3d9970; width: 100%;height: 324px;">
-            <h1>ჩვენს შესახებ</h1>
-            <p>"jit" წარმოადგენს თბილისის სატრანსპორტო კომპანიას, რომელიც სპეციალიზირებულია საგზაო მოძრაობის ორგანიზების სქემებისა და ტრანსპორტზე ზეგავლენის კვლევის საკითხებში. ჩვენი გუნდი დაკომპლექტებულია თბილისის მერიის ტრანსპორტისა და ურბანული განვითარების სააგენტოს ყოფილი თანამშრომლებით, რომლებიც მზად არიან დაგეხმარონ ნებისმიერი სირთულის სანებართვო დოკუმენტაციის მომზადებასა და განთავსებაში. ჩვენი მიზანია ქალაქის სატრანსპორტო სისტემის ეფექტური მართვა და განვითარება, რათა მაქსიმალურად გაუმჯობესდეს მოქალაქეების გადაადგილება და უსაფრთხოება. გახადე მომავალი ხელშესახები!</p>
-        </section>
-        <section class="services"id="services" style="width: 100%;">
-            <div class="service">
 
-                <img src="services.webp" width="661px" height="420px" class="img">
-              
-                <div class="servicestxt">
-                    <div class="servicestxtup">
-                        JIT გთავაზობთ,<br><br>
-                        •	სატრასნპორტო კვლევა<br>
-                        •	საგზაო მოძრაობის ორგანიზების სქემა (მუდმივი ვარიანტი)<br>
-                        •	მშენებლობის პერიოდში საგზაო მოძრაობის ორგანიზების დროებითი სქემა<br>
-                        •	მონტაჟი-დემონტაჟის დროს საგზაო მოძრაობის ორგანიზების დროებითი სქემა<br>
-                        •	ტექნიკის განთავსების სქემა<br>
-                        •	შემოვლითი გზების ორგანიზების სქემა.
-                        
-                        </div>
-                      <button  id="showMore" class="bttnRdMr">იხილეთ დეტალები</button>
-                    </div>
-                  </div>
-             
-           
-            <div id="myText" class="kvleva">
-                <div class="kvlevsqema">
-                    
-                    <div class="servicestxtmiddle">რა არის სატრანსპორტო სქემა? <br><br>
-                        საგზაო მოძრაობის ორგანიზების სქემა წარმოადგენს სისტემურ გეგმას, რომელიც შედგენილია  „მშენებლობის ნებართვის გაცემის წესისა და სანებართვო პირობების შესახებ“ დადგენილების მიხედვით და მიზნად ისახავს სატრანსპორტო და ქვეითად მოსიარულეთა ნაკადების რეგულირებას. <i id="Sqema">მიწის ნაკვეთის განაშენიანების პირობების (გაპის) ეტაპზე დამკვეთს წარმოექმნება ვალდებულება აღნიშნული სქემა წარადგინოს ტრანსპორტისა და ურბანული განვითარების სააგენტოს სპეციალურ ვებგვერდსა და საპატრულო პოლიციის დეპარტამენტში.</i>
-                    </div>
-                    <button id="SqemaMore"> იხილეთ მეტი </button>
-
-                    <div class="servicestxtdown"> რა არის სატრანსპორტო კვლევა? <br><br>
-                        სატრანსპორტო კვლევა წარმოადგენს პროექტის გავლენის შეფასებას არსებული სატრანსპორტო და საგზაო ინფრასტრუქტურაზე. აღნიშნული კვლევის დოკუმენტის მომზადების  აუცილებლობა წარმოიშვება განაშენიანების რეგულირების გეგმის (გრგ) ეტაპზე  იმ არქიტექტურული პროექტებისთვის, რომელთა ფართობი 6000 კვ.მ.-ს აღემატება. <i id="Kvleva"> გამონაკლისია ისეთი პროექტები, რომლებიც მიუხედავად მათი მოცულობისა, წარმოადგენს ღამის კლუბებს, საწყობებს, საწარმოო და სამრეწველო ობიექტებს, მუზეუმებს, ბიბლიოთეკებსა და საკულტო ნაგებობებს.
-                    </i>
-                        </div>
-                        <button id="kvlevaMore"> იხილეთ მეტი </button>
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="Portrait.webp" alt="Architectural Model" class="img-fluid rounded-3 shadow">
                 </div>
-                <img src="SatransportoSqema" width="651px" height="420px" >
-
-        </section>
-    </main>
-    <footer id="footer">
-        <div class="leftfooter">
-            ც.დადიანის ქუჩა N7ბ <br> <br>
-            jittopography@gmail.com <br><br>
-            + 995 568 86 77 86 <br><br>
-            + 032 2 06 03 03
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-4">Just In Time</h1>
+                    <p class="lead">JIT: ჩვენ ვქმნით სატრანსპორტო სქემებს, რომლებიც უზრუნველყოფს თბილისის საგზაო ინფრასტრუქტურის განვითარებას და უსაფრთხოებას.</p>
+                </div>
+            </div>
         </div>
-        <div class="rightfooter">
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28334.232476184676!2d44.7638646233125!3d41.714707083730126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440d0044c5b313%3A0xbf383d02de584e1a!2sTs.%20Dadiani%20Str.%207A!5e0!3m2!1sen!2sge!4v1730220726661!5m2!1sen!2sge" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="text-center mb-4">ჩვენს შესახებ</h2>
+            <p class="lead">"JIT" წარმოადგენს თბილისის სატრანსპორტო კომპანიას, რომელიც სპეციალიზირებულია საგზაო მოძრაობის ორგანიზების სქემებისა და ტრანსპორტზე ზეგავლენის კვლევის საკითხებში.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="text-center mb-5">ჩვენი სერვისები</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card service-card h-100">
+                        <img src="services.webp" class="card-img-top" alt="Services">
+                        <div class="card-body">
+                            <h5 class="card-title">JIT გთავაზობთ</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>სატრასნპორტო კვლევა</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>საგზაო მოძრაობის ორგანიზების სქემა</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>მშენებლობის პერიოდში საგზაო მოძრაობის ორგანიზების დროებითი სქემა</li>
+                            </ul>
+                            <button class="btn btn-primary mt-3" data-bs-toggle="collapse" data-bs-target="#moreServices">
+                                იხილეთ დეტალები
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card service-card h-100">
+                        <img src="SatransportoSqema" class="card-img-top" alt="Transport Scheme">
+                        <div class="card-body">
+                            <h5 class="card-title">სატრანსპორტო სქემა</h5>
+                            <p class="card-text">საგზაო მოძრაობის ორგანიზების სქემა წარმოადგენს სისტემურ გეგმას, რომელიც შედგენილია მშენებლობის ნებართვის გაცემის წესისა და სანებართვო პირობების შესახებ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>კონტაქტი</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>ც.დადიანის ქუჩა N7ბ</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>jittopography@gmail.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+ 995 568 86 77 86</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+ 032 2 06 03 03</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28334.232476184676!2d44.7638646233125!3d41.714707083730126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440d0044c5b313%3A0xbf383d02de584e1a!2sTs.%20Dadiani%20Str.%207A!5e0!3m2!1sen!2sge!4v1730220726661!5m2!1sen!2sge" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-         
-    <script>
-        const toggleTextButton = document.getElementById("showMore");
-const myText = document.getElementById("myText");
 
-toggleTextButton.addEventListener("click", () => {
-  if (myText.style.display === "none") {
-    myText.style.display = "flex";
-    toggleTextButton.innerHTML = "იხილეთ ნაკლები";
-  } else {
-    myText.style.display = "none";
-    toggleTextButton.innerHTML = "იხილეთ დეტალები";
-  }
-});
-const toggleSqemaButton = document.getElementById("SqemaMore");
-const SqemaText = document.getElementById("Sqema");
-
-toggleSqemaButton.addEventListener("click", () => {
-  if (SqemaText.style.display === "none") {
-    SqemaText.style.display = "block";
-    toggleSqemaButton.innerHTML = "იხილეთ ნაკლები";
-  } else {
-    SqemaText.style.display = "none";
-    toggleSqemaButton.innerHTML = "იხილეთ მეტი";
-  }
-});
-const togglekvlevaButton = document.getElementById("kvlevaMore");
-const kvlevaText = document.getElementById("Kvleva");
-
-togglekvlevaButton.addEventListener("click", () => {
-  if (kvlevaText.style.display === "none") {
-    kvlevaText.style.display = "block";
-    togglekvlevaButton.innerHTML = "იხილეთ ნაკლები";
-  } else {
-    kvlevaText.style.display = "none";
-    togglekvlevaButton.innerHTML = "იხილეთ მეტი";
-  }
-});
-const lala = document.getElementById('lala');
-const mainul = document.getElementById('ul');
-
-lala.addEventListener("click", () => {
-  if (mainul.style.display === "none") {
-    mainul.style.display = "flex";
-  } else {
-    mainul.style.display = "none";
-
-  }
-});
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

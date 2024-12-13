@@ -322,7 +322,7 @@ footer{
         height: 320px !important;
     }
 }
-@media(max-width: 363px){
+@media(max-width: 375px){
     h2,h1,p{
         font-size: small !important;
     }
